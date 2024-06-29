@@ -32,14 +32,18 @@
     
 
     <div class="btn-container">
-        <button type="button" class="btn-toggle">
+        <button type="button" class="btn-toggle" onclick="bulbon()">
             ON
         </button>
-        <button type="button" class="btn-toggle">
+        <button type="button" class="btn-toggle" onclick="bulboff()">
             OFF
         </button>
     </div>
     <script>
+        function bulbon(){
+            const bulbElement = document.getElementById("img-bulb")
+            bulbElement.src="on.png"
+        }
 
     </script>
 </body>
