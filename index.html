@@ -32,17 +32,20 @@
     
 
     <div class="btn-container">
-        <button type="button" class="btn-toggle" onclick="toglebulb('on')">
-            ON
+        <button type="button" class="btn-toggle" onclick="toglebulb('')">
+            Toggle
         </button>
-        <button type="button" class="btn-toggle" onclick="toglebulb('off')">
-            OFF
-        </button>
+
+        <!-- <button type="button" class="btn-toggle" onclick="toglebulb('off')"> -->
+            <!-- OFF -->
+        <!-- </button> -->
     </div>
     <script>
         function toglebulb(state){
             const bulbElement = document.getElementById("img-bulb")
-            bulbElement.src= state == 'on' ? "on.png" : "off.png"
+            console.log(bulbElement.src.includes(bulb-off.png))
+
+            // bulbElement.src= state == 'on' ? "on.png" : "off.png"
         }
 
         // function bulboff(){
