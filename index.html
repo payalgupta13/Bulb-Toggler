@@ -28,11 +28,11 @@
 </head>
 <body>
     <h1 class="app-title">Bulb Toggler</h1>
-    <img src="off.png" class="img-bulb" id="img-bulb">
+    <img src="off.png" class="img-bulb" id="img-bulb"/>
     
 
     <div class="btn-container">
-        <button type="button" class="btn-toggle" onclick="toglebulb('')">
+        <button type="button" class="btn-toggle" onclick="toggleBulb()">
             Toggle
         </button>
 
@@ -41,11 +41,19 @@
         <!-- </button> -->
     </div>
     <script>
-        function toglebulb(state){
+        function toggleBulb(){
             const bulbElement = document.getElementById("img-bulb")
-            console.log(bulbElement.src.includes(bulb-off.png))
 
-            // bulbElement.src= state == 'on' ? "on.png" : "off.png"
+            if(bulbElement.src.includes("off.png")){
+                bulbElement.src="on.png"
+            }
+            else
+            {
+                bulbElement.src="off.png"  
+            }
+            // console.log(bulbElement.src.includes(bulb-off.png))
+
+            bulbElement.src= state == 'on' ? "on.png" : "off.png"
         }
 
         // function bulboff(){
