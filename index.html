@@ -23,6 +23,9 @@
             margin: 10px 30px;
             width: 100px;
             cursor: pointer;
+            border-radius: 10px;
+            border: none;
+            padding: 10px 20px;
         }
         .bg-dark{
             background-color: #1a1a1a;
@@ -44,6 +47,14 @@
             background-color: #ccd9ff;
             color: black;
         }
+        .btn-dark{
+            background-color: #990099;
+            color: #fff;
+        }
+        .btn-light{
+            background-color: #ff751a;
+            color: #000;
+        }
     </style>
 </head>
 <body class="bg-light" id="main-body">
@@ -58,7 +69,9 @@
     
 
     <div class="btn-container">
-        <button type="button" class="btn-toggle" onclick="toggleBulb()">
+        <button type="button" class="btn-toggle btn-light"
+             onclick="toggleBulb()" 
+             id="btn-toggle">
             Toggle
         </button>
 
@@ -86,12 +99,21 @@
             const mainbody = document.getElementById("main-body")
             mainbody.classList.remove("bg-light")
             mainbody.classList.add("bg-dark")
+
+
+            const toggleButton = document.getElementById("btn-toggle"); 
+            toggleButton.classList.remove("btn-light");
+            toggleButton.classList.add("btn-dark");
         }
 
         function enableLight(){
             const mainbody = document.getElementById("main-body")
             mainbody.classList.remove("bg-dark")
             mainbody.classList.add("bg-light")
+
+            const toggleButton = document.getElementById("btn-toggle"); 
+            toggleButton.classList.remove("btn-dark");
+            toggleButton.classList.add("btn-light");
         }
 
         // function bulboff(){
