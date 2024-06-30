@@ -24,10 +24,23 @@
             width: 100px;
             cursor: pointer;
         }
+        .bg-dark{
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+        .theme-select-icon{
+            height: 20px;
+        }
     </style>
 </head>
-<body>
+<body class="" id="main-body">
     <h1 class="app-title">Bulb Toggler</h1>
+
+    <div class="theme-selector-container">
+        <img src="sun.png" class="theme-select-icon">
+        <img src="full-moon.png" class="theme-select-icon"/>
+
+    </div>
     <img src="off.png" class="img-bulb" id="img-bulb"/>
     
 
@@ -54,6 +67,11 @@
             // console.log(bulbElement.src.includes(bulb-off.png))
 
             bulbElement.src= state == 'on' ? "on.png" : "off.png"
+        }
+
+        function enableDark(){
+            const mainbody = document.getElementById("main-body")
+            mainbody.classList.add("bg-dark")
         }
 
         // function bulboff(){
