@@ -29,7 +29,19 @@
             color: #fff;
         }
         .theme-select-icon{
-            height: 20px;
+            height: 30px;
+            cursor: pointer;
+        }
+        .theme-selector-container{
+            position: fixed;
+            right: 5px;
+        }
+        .bg-dark{
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+        .bg-light{
+            background-color: #ccd9ff;
         }
     </style>
 </head>
@@ -37,8 +49,8 @@
     <h1 class="app-title">Bulb Toggler</h1>
 
     <div class="theme-selector-container">
-        <img src="sun.png" class="theme-select-icon">
-        <img src="full-moon.png" class="theme-select-icon"/>
+        <img src="sun.png" class="theme-select-icon" onclick="enableLight()">
+        <img src="full-moon.png" class="theme-select-icon" onclick="enableDark()"/>
 
     </div>
     <img src="off.png" class="img-bulb" id="img-bulb"/>
