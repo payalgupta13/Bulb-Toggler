@@ -42,10 +42,11 @@
         }
         .bg-light{
             background-color: #ccd9ff;
+            color: black;
         }
     </style>
 </head>
-<body class="" id="main-body">
+<body class="bg-light" id="main-body">
     <h1 class="app-title">Bulb Toggler</h1>
 
     <div class="theme-selector-container">
@@ -83,7 +84,14 @@
 
         function enableDark(){
             const mainbody = document.getElementById("main-body")
+            mainbody.classList.remove("bg-light")
             mainbody.classList.add("bg-dark")
+        }
+
+        function enableLight(){
+            const mainbody = document.getElementById("main-body")
+            mainbody.classList.remove("bg-dark")
+            mainbody.classList.add("bg-light")
         }
 
         // function bulboff(){
